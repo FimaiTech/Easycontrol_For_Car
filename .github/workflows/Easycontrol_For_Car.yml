@@ -26,8 +26,8 @@ jobs:
         ./gradlew :server:copyRelease --stacktrace
         ./gradlew :app:assembleDebug --stacktrace
         
-    - name: Download a Build Artifact
-      uses: actions/download-artifact@v4.3.0
+    - name: Upload APK
+      uses: actions/upload-artifact@v2
       with:
         name: my-build-apk
         path: ./easycontrol/app/build/outputs/apk/debug/*.apk
