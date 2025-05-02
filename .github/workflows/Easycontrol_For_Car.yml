@@ -26,7 +26,7 @@ jobs:
         ./gradlew :server:copyRelease --stacktrace
         ./gradlew :app:assembleDebug --stacktrace
         
-    - name: Upload APK
+    - name: Download a Build Artifact
       uses: actions/download-artifact@v4.3.0
       with:
         name: my-build-apk
